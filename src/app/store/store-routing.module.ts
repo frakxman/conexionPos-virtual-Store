@@ -2,9 +2,10 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 // Components 
+import { CategoriesPageComponent } from './pages/categories/categories.component';
+import { CartPageComponent } from './pages/cart/cart.component';
 import { LayoutComponent } from './pages/layout/layout.component';
 import { ProductsPageComponent } from './pages/products/products-page.component';
-import { CartPageComponent } from './pages/cart/cart.component';
 
 const routes: Routes = [
   {
@@ -13,9 +14,10 @@ const routes: Routes = [
     children: [
         { path: 'products', component: ProductsPageComponent },
         { path: 'cart', component: CartPageComponent},
+        { path: 'categories', component: CategoriesPageComponent },
         { path: '**', redirectTo: 'products' },
     ]
-  }
+  },
 ];
 
 @NgModule({

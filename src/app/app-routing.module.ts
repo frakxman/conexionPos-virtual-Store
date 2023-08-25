@@ -12,7 +12,7 @@ const routes: Routes = [
     loadChildren: () => import('./store/store.module').then( m => m.StoreModule ),
   },
   { path: '404', component: ErrorPageComponent },
-  { path: '', redirectTo: 'heroes', pathMatch: 'full' },
+  { path: '', redirectTo: 'store', pathMatch: 'full' },
   { path: '**', redirectTo: '404' },
 ];
 
