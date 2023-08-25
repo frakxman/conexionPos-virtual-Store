@@ -3,4 +3,8 @@
 <div class="container">
     <app-searcher></app-searcher>
     <hr>
+    <h1>Categorias</h1>
+    <ul>
+        <li *ngFor="let category of categories">{{category.nombre}}</li>
+    </ul>
 </div>
