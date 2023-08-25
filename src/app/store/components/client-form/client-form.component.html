@@ -1,0 +1,108 @@
+<div class="container mt-4">
+    <div class="card">
+        <div class="card-header">
+            <h3 class="text-center">Create Client</h3>
+        </div>
+        <div class="card-body">
+            <form>
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <label for="nit" class="form-label">NIT ó C.C</label>
+                        <input type="text" class="form-control" id="nit" />
+                    </div>
+                    <div class="col-md-2 mb-3">
+                        <label for="digito" class="form-label">Dígito</label>
+                        <input type="number" class="form-control" id="digito" v-model="customer.digito" disabled />
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="TipoId" class="form-label">Tipo de Identificación</label>
+                        <select class="form-select" id="TipoId" v-model="customer.TipoId" required>
+                            <option selected>Seleccione una opción</option>
+                            <option :value="document.TipoId" v-for="(document, index) in customerStore.documents"
+                                :key="index + document.TipoId"></option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="nombres" class="form-label">Nombres</label>
+                        <input type="text" class="form-control" id="nombres" v-model="customer.nombres" required />
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="nombre2" class="form-label">Segundo Nombre</label>
+                        <input type="text" class="form-control" id="nombre2" v-model="customer.nombre2" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="apellidos" class="form-label">Primer Apellido</label>
+                        <input type="text" class="form-control" id="apellidos" v-model="customer.apellidos" />
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="apellido2" class="form-label">Segundo Apellido</label>
+                        <input type="text" class="form-control" id="apellido2" v-model="customer.apellido2" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="direccion" class="form-label">Dirección</label>
+                        <input type="text" class="form-control" id="direccion" v-model="customer.direccion" required />
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="telefono" class="form-label">Teléfono</label>
+                        <input type="text" class="form-control" id="telefono" v-model="customer.telefono" required />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="email" class="form-label">Correo Electrónico</label>
+                        <input type="email" class="form-control" id="email" v-model="customer.email" required />
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="email2" class="form-label">Segundo Correo Electrónico</label>
+                        <input type="email" class="form-control" id="email2" v-model="customer.email2" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <label for="idpais" class="form-label">País</label>
+                        <select class="form-select" id="idpais" v-model="customer.idpais" required>
+                            <option :value="country.idpais" v-for="(country, index) in customerStore.countries"
+                                :key="index + country.idpais"></option>
+                        </select>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="iddepto" class="form-label">Departamento</label>
+                        <select class="form-select" id="iddepto" v-model="customer.iddepto" required>
+                            <option :value="department.iddepto" v-for="(department, index) in customerStore.departments"
+                                :key="index + department.iddepto"></option>
+                        </select>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="idmunicipio" class="form-label">Municipio</label>
+                        <select class="form-select" id="idmunicipio" v-model="customer.idmunicipio" required>
+                            <option :value="municipalitie.idmunicipio"
+                                v-for="(municipalitie, index) in customerStore.municipalities"
+                                :key="index + municipalitie.idmunicipio"></option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="tipofactura" class="form-label">Tipo de Factura</label>
+                        <select class="form-select" id="tipofactura" v-model="customer.tipofactura" required>
+                            <option :value=1>P.O.S</option>
+                            <option :value=2>Electrónica</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <button v-if="customerFound" class="btn btn-primary">Editar</button>
+                        <button class="btn btn-primary">Guardar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

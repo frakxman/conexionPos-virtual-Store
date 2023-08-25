@@ -1,3 +1,62 @@
+<store-navbar></store-navbar>
+
 <div class="container">
-    <h1>cart works!</h1>
+    <div class="container">
+        <h2 class="mb-4 text-center">Carrito</h2>
+        <div class="table-responsive">
+
+            <table class="table table-bordered ">
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Descripcion</th>
+                        <th>Cantidad de productos</th>
+                        <th>Precio</th>
+                        <th>Total</th>
+                        <th>Acción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="product in cartStore.cart" :key="product.idproducto">
+                        <td>
+                            <div class="d-flex align-items-center">
+                                <img :src="product.url_foto || defaultImageUrl" class="cart-product-image me-3"
+                                    alt="Product Image" />
+                            </div>
+                        </td>
+                        <td></td>
+                        <td class="d-flex align-items-center">
+                            <div class="input-group input-group-sm">
+                                <button class="btn btn-secondary">
+                                    -
+                                </button>
+                                <input type="number" class="form-control text-center" />
+                                <button class="btn btn-secondary" >
+                                    +
+                                </button>
+                            </div>
+                        </td>
+                        <td>$ </td>
+                        <td>$</td>
+                        <td>
+                            <button class="btn btn-danger btn-sm" >
+                                <i class="bi bi-trash3-fill"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" class="text-end"><strong>Total</strong></td>
+                        <td>
+                            <strong>$</strong>
+                        </td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <app-client-form></app-client-form>
+    </div>
 </div>
+
+.

@@ -9,6 +9,7 @@ import { CategoriesPageComponent } from './pages/categories/categories.component
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { CardComponent } from './components/card/card.component';
 import { SearcherComponent } from './components/searcher/searcher.component';
+import { ClientFormComponent } from './components/client-form/client-form.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { SearcherComponent } from './components/searcher/searcher.component';
     CategoriesPageComponent,
     NavbarComponent,
     CardComponent,
-    SearcherComponent
+    SearcherComponent,
+    ClientFormComponent
   ],
   imports: [
     CommonModule,
