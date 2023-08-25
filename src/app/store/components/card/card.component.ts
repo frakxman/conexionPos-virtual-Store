@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Products } from '../../interfaces/products.interface';
 
 @Component({
   selector: 'products-card',
@@ -6,6 +7,13 @@ import { Component } from '@angular/core';
   styles: [
   ]
 })
-export class CardComponent {
+export class CardComponent implements OnInit {
+
+  @Input() 
+  public products!: Products[]
+
+  ngOnInit(): void {
+    if( !this.products ) throw Error('Products property is required');
+  }
 
 }
