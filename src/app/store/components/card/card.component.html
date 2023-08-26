@@ -2,11 +2,11 @@
     <div class="col col-md-3 mb-4" *ngFor="let product of products">
         <div class="card card text-dark bg-ligth">
 
-            <img [src]="product.url_foto | productImage" class="card-img-fixed card-img-top centered-img" alt="...">
+            <img [src]="product.url_foto || 'assets/logo_celulares.png'" class="card-img-fixed card-img-top centered-img" alt="...">
             <div class="card-body">
                 <h5 class="card-title">{{ product.descripcion }}</h5>
-                <p class="card-text">Stock: {{ product.codigo }}</p>
-                <p class="card-text">Código: {{ product.barcode }}</p>
+                <p class="card-text">Stock: {{ product.cantidad }}</p>
+                <p class="card-text">Código: {{ product.codigo }}</p>
                 <p class="card-text">SKU: {{ product.barcode }}</p>
                 <h5 class="card-text">Precio: {{ product.precioventa | currency }}</h5>
                 <button class="btn btn-primary btn-lg w-100">

@@ -10,7 +10,6 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { CardComponent } from './components/card/card.component';
 import { SearcherComponent } from './components/searcher/searcher.component';
 import { ClientFormComponent } from './components/client-form/client-form.component';
-import { ProductImagePipe } from './pipes/product-image.pipe';
 
 
 @NgModule({
@@ -22,8 +21,7 @@ import { ProductImagePipe } from './pipes/product-image.pipe';
     NavbarComponent,
     CardComponent,
     SearcherComponent,
-    ClientFormComponent,
-    ProductImagePipe
+    ClientFormComponent
   ],
   imports: [
     CommonModule,
