@@ -4,7 +4,12 @@
     <app-searcher></app-searcher>
     <hr>
     <h1>Categorias</h1>
-    <ul>
-        <li *ngFor="let category of categories">{{category.nombre}}</li>
+    <ul class="list-group">
+        <li *ngFor="let category of categories" 
+            class="list-group-item"
+            routerLink=""
+        >
+            {{category.nombre}}
+        </li>
     </ul>
 </div>

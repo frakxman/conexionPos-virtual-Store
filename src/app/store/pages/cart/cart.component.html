@@ -20,7 +20,7 @@
                     <tr v-for="product in cartStore.cart" :key="product.idproducto">
                         <td>
                             <div class="d-flex align-items-center">
-                                <img :src="product.url_foto || defaultImageUrl" class="cart-product-image me-3"
+                                <img :src="product.url_foto | productImage" class="cart-product-image me-3"
                                     alt="Product Image" />
                             </div>
                         </td>
