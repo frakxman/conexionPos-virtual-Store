@@ -6,8 +6,11 @@
     <br>
     <h1 class="text-center">Categorias</h1>
     <ul class="list-group">
-        <li *ngFor="let category of categories" class="list-group-item text-center" routerLink="">
+        <li *ngFor="let category of categories" class="list-group-item text-center">
             {{category.nombre}}
+            <!-- <a [routerLink]="['/store/products']">
+                <i class="bi bi-clipboard-data"></i>
+            </a> -->
         </li>
     </ul>
 </div>

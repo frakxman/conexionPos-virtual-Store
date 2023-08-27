@@ -8,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
 
+  public navbarItems = [
+    { link: 'categories' },
+    { link: 'products' }
+  ]
+
 }

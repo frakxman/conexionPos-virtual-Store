@@ -11,13 +11,13 @@ import { Categories } from '../../interfaces/categories.interface';
 export class CategoriesPageComponent implements OnInit {
 
   public categories: Categories[] = [];
+  
 
   constructor( private categoriesServices: CategoriesService ) {}
 
   ngOnInit(): void {
       this.categoriesServices.getAllCategories()
         .subscribe( categories => this.categories = categories );
-        console.log(this.categories);
   }
 
 }
