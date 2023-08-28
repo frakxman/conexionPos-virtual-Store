@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class CartPageComponent {
 
+  // Get ProductId to add to shopping car 
+  // getProductById() {}
+
+  // Add to car 
+  // addProductToCar(){} 
+
 }

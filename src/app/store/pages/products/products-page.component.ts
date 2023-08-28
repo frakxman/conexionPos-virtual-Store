@@ -22,4 +22,10 @@ export class ProductsPageComponent implements OnInit {
     );
   }
 
+  // Get ProductId to add to shopping car 
+  // getProductById() {}
+
+  // Add to car 
+  // addProductToCar(){} 
+
 }

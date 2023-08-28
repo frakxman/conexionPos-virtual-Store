@@ -1,4 +1,3 @@
-<store-navbar></store-navbar>
 
 <div class="container mt-5">
     <br class="mt-5">
@@ -8,9 +7,9 @@
     <ul class="list-group">
         <li *ngFor="let category of categories" class="list-group-item text-center">
             {{category.nombre}}
-            <!-- <a [routerLink]="['/store/products']">
+            <a [routerLink]="['.']">
                 <i class="bi bi-clipboard-data"></i>
-            </a> -->
+            </a>
         </li>
     </ul>
 </div>

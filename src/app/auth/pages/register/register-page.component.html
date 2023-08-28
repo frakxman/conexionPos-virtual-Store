@@ -6,19 +6,32 @@
                     <h3 class="text-center">Registrar Usuario</h3>
                 </div>
                 <div class="card-body">
-                    <form>
+                    <form [formGroup]="myForm" (ngSubmit)="register()">
                         <div class="mb-3">
                             <label for="username" class="form-label">Usuario</label>
-                            <input type="text" class="form-control" v-model="user.username"
-                                placeholder="Ingrese su usuario">
+                            <input
+                                type="text"
+                                class="form-control"
+                                formControlName="username"
+                                placeholder="Ingrese su usuario"
+                            >
                         </div>
                         <div class="mb-3">
                             <label for="password" class="form-label">Contraseña</label>
-                            <input type="password" class="form-control" v-model="user.password"
+                            <input
+                                type="password"
+                                class="form-control"
+                                formControlName="password"
                                 placeholder="Ingrese su contraseña">
                         </div>
                         <div class="d-grid gap-2">
-                            <button type="submit" class="btn btn-dark">Crear</button>
+                            <button
+                                class="btn btn-dark"
+                                [disabled]="myForm.invalid"
+                                type="submit"
+                            >
+                                Crear
+                            </button>
                         </div>
                     </form>
                 </div>

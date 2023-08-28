@@ -4,10 +4,18 @@
         <a class="navbar-brand" [routerLink]="['/store/products']">
             <img width="35" src="assets/logo_celulares.png" alt="logo_del_store">
         </a>
-        <a class="navbar-brand" href="#">
-            <i class="bi bi-cart-3"></i>
+        <a class="navbar-brand" [routerLink]="['/store/cart']">
+            <i class="bi bi-cart3"></i>
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+        <div class="navbar-brand">
+            <a class="navbar-brand" [routerLink]="['/store/categories']">
+                Categorias
+            </a>
+            <a class="navbar-brand" [routerLink]="['/store/products']">
+                Productos
+            </a>
+        </div>
+        <!-- <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
@@ -29,7 +37,7 @@
                     </li>
                 </ul>
             </div>
-        </div>
+        </div> -->
     </div>
 </nav>
 

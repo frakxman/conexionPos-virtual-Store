@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from "@angular/common/http";
+import { HttpClient, HttpParams } from "@angular/common/http";
 
 import { environments } from 'src/environments/environments';
 
@@ -17,7 +17,13 @@ export class ProductsService {
 
   // Get all products
   getAllProducts() {
+    // @HttpParams()
+    //   .set()
     return this.http.get<Products[]>(`${ this.baseUrl }/products/4?page=1&limit=9`);     
+  }
+
+  getProductsByPage() {
+    // @HttpParams
   }
 
 }
